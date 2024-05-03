@@ -1,0 +1,18 @@
+{
+  "name": "vdl",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build:model": "tsp compile model",
+    "generate:app": "npx @openapitools/openapi-generator-cli generate -i ./tsp-output/@typespec/openapi3/openapi.v1.yaml -g python-fastapi -o ./app"
+  },
+  "dependencies": {
+    "@openapitools/openapi-generator-cli": "latest",
+    "@typespec/compiler": "latest",
+    "@typespec/http": "latest",
+    "@typespec/openapi3": "latest",
+    "@typespec/rest": "latest",
+    "@typespec/versioning": "latest"
+  }
+}
