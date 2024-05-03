@@ -22,7 +22,10 @@
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
-			"extensions": ["typespec.typespec-vscode"]
+			"extensions": [
+				"ms-python.black-formatter",
+				"typespec.typespec-vscode"
+			]
 		}
 	}
 
