@@ -1,0 +1,37 @@
+openapi: 3.0.0
+info:
+  title: vdl
+  version: v1
+tags: []
+paths:
+  /providers/youtube:
+    post:
+      operationId: YouTube_download
+      parameters: []
+      responses:
+        '200':
+          description: The request has succeeded.
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Providers.YouTube.DownloadRequest'
+components:
+  schemas:
+    Providers.YouTube.DownloadRequest:
+      type: object
+      required:
+        - video
+      properties:
+        video:
+          type: string
+    Versions:
+      type: string
+      enum:
+        - v1
